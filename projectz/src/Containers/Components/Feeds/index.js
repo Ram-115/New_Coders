@@ -8,7 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const data = [
   {
     id: 1,
-    userName: 'Aryan Raj',
+    userName: 'Ram',
     content: 'Installation and Training at Govt Medical College...',
     likes: 110,
     comments: 32,
@@ -18,7 +18,7 @@ const data = [
   },
   {
     id: 1,
-    userName: 'Aryan Raj',
+    userName: 'Krishna',
     content: 'Installation and Training at Govt Medical College...',
     likes: 110,
     comments: 32,
