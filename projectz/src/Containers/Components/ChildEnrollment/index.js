@@ -7,10 +7,8 @@ import PersonIcon from '@mui/icons-material/Person';
 
 const RegistrationForm = () => {
   return (
-    <Box sx={{ padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px' }}>
+    <Box sx={{ padding: '20px', backgroundColor: '#f0f8ff', borderRadius: '8px' }} width={'100%'}>
       <Grid container spacing={3}>
-        
-        {/* Demographic Information */}
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" gutterBottom display={'flex'} alignItems={'center'}>
             <PersonIcon />&nbsp;Demographic Information
@@ -19,8 +17,6 @@ const RegistrationForm = () => {
           <TextField fullWidth label="Gender" variant="outlined" margin="normal" />
           <TextField fullWidth label="Date of Birth" variant="outlined" margin="normal" />
         </Grid>
-
-        {/* Photograph Section */}
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" gutterBottom display={'flex'} alignItems={'center'}>
             <CameraAltIcon />&nbsp;Photograph
@@ -31,8 +27,6 @@ const RegistrationForm = () => {
             </Button>
           </Box>
         </Grid>
-
-        {/* Parent Authentication */}
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" gutterBottom display={'flex'} alignItems={'center'}>
             <FingerprintIcon />&nbsp;Parent Authentication
@@ -43,16 +37,12 @@ const RegistrationForm = () => {
             </Button>
           </Box>
         </Grid>
-
-        {/* Acknowledgement Mobile */}
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" gutterBottom display={'flex'} alignItems={'center'}>
             <PhoneIcon />&nbsp;Acknowledgement Mobile
           </Typography>
           <TextField fullWidth label="Mobile for Communication" variant="outlined" margin="normal" />
         </Grid>
-
-        {/* Parents' Aadhaar */}
         <Grid item xs={12} sm={4}>
           <Typography variant="h6" gutterBottom display={'flex'} alignItems={'center'}>
             Parents' Aadhaar
@@ -60,8 +50,6 @@ const RegistrationForm = () => {
           <TextField fullWidth label="Mother Aadhaar" variant="outlined" margin="normal" />
           <TextField fullWidth label="Father Aadhaar" variant="outlined" margin="normal" />
         </Grid>
-
-        {/* Action Buttons */}
         <Grid item xs={12} sm={4} gap={2} display="flex" alignItems="end" justifyContent={'end'}>
           <Button variant="contained" color="success">
             Review

@@ -11,9 +11,10 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import PeopleIcon from '@mui/icons-material/People';
 import ForumIcon from '@mui/icons-material/Forum';
 import HelpIcon from '@mui/icons-material/Help';
-
+import HomeIcon from '@mui/icons-material/Home';
 const SideBar = () => {
   const menuItems = [
+    { name: 'Home', route: '/home/welcome', icon: <HomeIcon /> },
     { name: 'Child Enrollment', route: '/home/child-enrollment', icon: <PersonAddIcon /> },
     { name: 'Nutrition & Health', route: '/home/nutrition-health', icon: <HealthAndSafetyIcon /> },
     { name: 'Programs & Activities', route: '/home/programs-activities', icon: <EventIcon /> },
