@@ -1,23 +1,49 @@
-import { AppBar, Avatar, Grid, Stack, Toolbar, Typography } from '@mui/material'
-import React from 'react'
+import { AppBar, Avatar, Badge, Grid, Menu, MenuItem, Stack, Toolbar, Typography } from '@mui/material'
+import React, { useState } from 'react'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const NavBar = () => {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
     return (
-        <AppBar position="fixed" sx={{ zIndex: 1201 }}>
-            <Toolbar>
-                <Grid container display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
+        <Grid container px={2} py={1.5}
+            sx={{
+                background: 'linear-gradient(135deg, #fdf497, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)'
+            }}>
+            <>
+                <Grid container width={'100%'} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
                     <Stack>
-                      <MenuIcon  sx={{color:'#fff'}}/>  
+                        <MenuIcon sx={{ color: '#fff' }} />
                     </Stack>
-                    <Stack direction={'row'} spacing={2} alignItems={'center'}>
-                        <NotificationsIcon  sx={{color:'#fff'}}/>
-                        <Avatar src='https://c4.wallpaperflare.com/wallpaper/146/782/552/nature-is-pleased-with-simplicity-and-nature-is-no-dummy-wallpaper-preview.jpg' />
+                    <Stack direction={'row'} spacing={3} alignItems={'center'}>
+                        <Badge badgeContent={4} color="success">
+                            <NotificationsIcon sx={{ color: '#fff' }} />
+                        </Badge>
+                        <Avatar sx={{ cursor: 'pointer' }} onClick={handleClick} src='https://c4.wallpaperflare.com/wallpaper/146/782/552/nature-is-pleased-with-simplicity-and-nature-is-no-dummy-wallpaper-preview.jpg' />
                     </Stack>
                 </Grid>
-            </Toolbar>
-        </AppBar>
+            </>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+            >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+            </Menu>
+        </Grid>
     )
 }
 

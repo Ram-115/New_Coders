@@ -76,7 +76,7 @@ const PostCard = ({ post }) => {
 
 const PostGrid = () => {
   return (
-    <Grid container spacing={2} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+    <Grid container spacing={2} width={'100%'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
       {data.map((post) => (
         <Grid item xs={12} sm={6} key={post.id}>
           <PostCard post={post} />

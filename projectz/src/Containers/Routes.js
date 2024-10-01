@@ -4,6 +4,7 @@ import LogInPage from './Layout/LogIn/LogIn';
 import Home from './Layout/HomePage';
 import PostCard from './Components/Feeds';
 import Networks from './Components/Networks';
+import RegistrationForm from './Components/ChildEnrollment';
 
 const AppRoutes = () => {
   return (
@@ -11,8 +12,8 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<LogInPage/>} />
         <Route path="/home" element={<Home/>}>
-          <Route path="feeds" element={<PostCard/>} />
-          <Route path="networks" element={<Networks/>} />
+          <Route path="child-enrollment" element={<RegistrationForm/>} />
+          <Route path="nutrition-health" element={<Networks/>} />
         </Route>
       </Routes>
     </Router>

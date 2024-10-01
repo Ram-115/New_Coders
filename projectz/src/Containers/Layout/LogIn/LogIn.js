@@ -7,7 +7,7 @@ const LogInPage = () => {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-      navigate('/home/feeds');
+      navigate('/home/child-enrollment');
     };
   return (
     <Grid container display={'flex'} alignItems={'center'} height={'100vh'} justifyContent={'center'}>
@@ -16,7 +16,7 @@ const LogInPage = () => {
       <TextField margin="normal" label="Username" variant="outlined" fullWidth />
       <TextField margin="normal" label="Password" type="password" variant="outlined" fullWidth />
       <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
-      <Button sx={{mt:1}} variant="contained" color="primary" onClick={handleLogin}>
+      <Button sx={{mt:1, color:'#fff'}} variant="contained" color="primary" onClick={handleLogin}>
         Login
       </Button>
       </Box>
